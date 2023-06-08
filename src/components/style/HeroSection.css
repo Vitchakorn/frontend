@@ -1,0 +1,64 @@
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+#bg-img {
+    filter: blur(5px);
+}
+
+.hero-container {
+    /* background: url('../../book-background.jpg') center center/cover no-repeat; */
+    color: beige;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0, 0.2);
+    object-fit:contain;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    text-shadow: -2px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.hero-content > h1 {
+    font-size: 100px;
+    margin-top: -100px;
+} 
+
+.hero-content > p {
+    margin-top: 8px;
+    font-size: 52px;
+} 
+
+.hero-btns {
+    margin-top: 32px;
+}
+
+.hero-btns .btn {
+    margin: 6px;
+}
+
+.btns {
+    background-color: aliceblue;
+}
+
+@media screen and (max-width: 960px) {
+    .hero-content > h1 {
+        font-size: 70px;
+        margin-top: -150px;
+    } 
+    .hero-content > p {
+        font-size: 32px;
+    } 
+}
+
+

@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { Button } from './Button.js';
 import { Link, NavLink } from 'react-router-dom'
-import './style/Navbar.css'
+import './style/AdminNavbar2.css'
 import { createTheme, ThemeProvider} from '@mui/material/styles';
 import "@fontsource/open-sans"
 import "@fontsource/roboto-condensed";
@@ -52,9 +52,9 @@ function Navbar() {
 
   return (
     <>
-      <nav className='navbar'>
-        <div className="navbar-container">
-          <div className="home-menu">
+      <nav className='admin-navbar'>
+        <div className="admin-navbar-container">
+          <div className="admin-home-menu">
             <Link to='/home' className='navbar-logo' style={styledRoboMono} onClick={closeMobileMenu}>
               BookCollec
               <i class="fa-solid fa-book"></i> 
@@ -65,27 +65,27 @@ function Navbar() {
             <i className={click ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'} />
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}> 
-            <li className='nav-item' >
-              <NavLink to='/home' className='nav-links' style={styledNunito} onClick={closeMobileMenu} activeClassName='bar-active' exact>
-                Home
+            <li className='admin-nav-item' >
+              <NavLink to="/report" className='admin-nav-links' style={styledNunito} onClick={closeMobileMenu} activeClassName='bar-active' exact>
+                Reported
               </NavLink>
             </li>
-            <li className='nav-item'>
-              <NavLink to='/books' className='nav-links' style={styledNunito} onClick={closeMobileMenu} activeClassName='bar-active' exact>
-                Books
+            <li className='admin-nav-item'>
+              <NavLink to="/createBook" className='admin-nav-links' style={styledNunito} onClick={closeMobileMenu} activeClassName='bar-active' exact>
+                Create Book
               </NavLink>
             </li>
-            <li className='nav-item'>
-              <NavLink to='/user-collection' className='nav-links' style={styledNunito} onClick={closeMobileMenu} activeClassName='bar-active' exact>
-                My Collection
+            <li className='admin-nav-item'>
+              <NavLink to='/editBook' className='admin-nav-links' style={styledNunito} onClick={closeMobileMenu} activeClassName='bar-active' exact>
+                Edit Books
               </NavLink>
             </li>
 
-            <li className='nav-item'>
+            {/* <li className='nav-item'>
               <NavLink to='/profile' className='nav-links' style={styledNunito} onClick={closeMobileMenu} activeClassName='bar-active' exact>
                 Profile
               </NavLink>
-            </li>
+            </li> */}
             
               <Link
                 to='/sign-up'

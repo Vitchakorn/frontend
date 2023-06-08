@@ -1,0 +1,15 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.bg-img{
+    background-image: url("../public/book-background.jpg");
+    height: 1000px;
+    padding-top: 100px;
+
+}
+
+.signin-container {
+    border-radius: 1rem;
+}
